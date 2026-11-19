@@ -1,37 +1,102 @@
 # QuickChat – Programming 1A PoE (PROG5121)
 
-A Java 17 Maven **console application** developed for Apache NetBeans. It combines registration/login, message handling, JSON storage, message searching/deletion, JUnit tests and GitHub Actions CI.
+## Project Description
 
-## Requirements
-- JDK 17 or later
-- Apache NetBeans with Maven support
-- Internet connection the first time Maven downloads dependencies
+QuickChat is a Java-based console messaging application developed for the Programming 1A Portfolio of Evidence (PoE). The application allows users to register, log in and manage messages through a simple menu-driven interface.
 
-## Open in Apache NetBeans
-1. Extract the project ZIP.
-2. Open Apache NetBeans.
-3. Select **File → Open Project**.
-4. Select the extracted `QuickChatPoE` folder (the folder containing `pom.xml`).
-5. Wait for Maven dependencies to load.
-6. Right-click the project and choose **Clean and Build**.
-7. Right-click `QuickChatApp.java` and choose **Run File**, or run the project main class `za.co.quickchat.QuickChatApp`.
+The project was developed using Java and Apache NetBeans with Maven.
 
-## Run the unit tests
-- Right-click the project and choose **Test**, or run `mvn clean test` in the project folder.
-- JUnit 5 tests are in `src/test/java/za/co/quickchat`.
-- GitHub Actions runs the same tests on pushes and pull requests.
+## Technologies Used
+
+- Java 17
+- Apache NetBeans IDE
+- Maven
+- JUnit 5
+- Gson (JSON processing)
+- GitHub
+- GitHub Actions
 
 ## Features
-- Registration validation: username, password and South African international cellphone number.
-- Login authentication and welcome/error messages.
-- Console menu: send messages, recently sent placeholder, quit, and stored-message tools.
-- Message IDs, message hashes, 250-character validation and send/disregard/store choices.
-- Runtime message collections and arrays for sent, disregarded, stored, hashes and IDs.
-- JSON persistence in `data/stored-messages.json` using Gson.
-- Search by message ID and recipient, longest-message lookup, delete by hash and message report.
 
-## JSON library attribution
-Stored message JSON is handled using Google's Gson library: https://github.com/google/gson (Apache License 2.0). Maven downloads Gson through the dependency in `pom.xml`.
+### User Registration and Login
+- Register a new user.
+- Validate usernames and passwords.
+- Validate South African cellphone numbers.
+- Log in using registered account details.
 
-## GitHub submission reminder
-The brief requires at least six commits for each project part and a final video presentation with your own voice showing the application running and explaining the logic and flow. Those account/submission actions must be completed in your own GitHub/Arc/YouTube accounts; this project ZIP does not claim they have been done.
+### Message Management
+- Create and send messages.
+- Generate unique message IDs.
+- Generate message hashes.
+- Validate message length.
+- Send, disregard or store messages.
+
+### Message Storage and Searching
+- Store messages in a JSON file.
+- Display stored messages.
+- Search for messages using message IDs.
+- Search for messages using recipient details.
+- Find the longest message.
+- Delete messages using their message hashes.
+- Generate a message report.
+
+### Testing
+- JUnit 5 unit tests.
+- Automated testing using GitHub Actions.
+
+## Project Requirements
+
+To run this application, you need:
+
+- JDK 17 or later.
+- Apache NetBeans IDE.
+- Maven support.
+- An internet connection for the initial Maven dependency downloads.
+
+## How to Run the Application
+
+1. Download or clone this repository.
+2. Open Apache NetBeans.
+3. Select **File → Open Project**.
+4. Select the QuickChatPoE project folder.
+5. Allow Maven to download the required dependencies.
+6. Right-click the project and select **Clean and Build**.
+7. Run the `QuickChatApp.java` main class.
+8. Follow the instructions displayed in the console.
+
+## Running the Unit Tests
+
+1. Open the project in Apache NetBeans.
+2. Right-click the project.
+3. Select **Test**.
+4. Check the test results to confirm whether the tests pass.
+
+Alternatively, run the following Maven command:
+
+```bash
+mvn clean test
+```
+
+## JSON Storage
+
+The application uses JSON to store messages. Google's Gson library is used to process JSON data.
+
+Stored messages are saved in:
+
+`data/stored-messages.json`
+
+## GitHub Actions
+
+GitHub Actions is used to automate the testing process. The workflow runs the project's unit tests when changes are pushed to the repository or when a pull request is created.
+
+## Author
+
+**Programming 1A – PROG5121**
+
+**Project:** QuickChat PoE
+
+**Development Environment:** Apache NetBeans
+
+## Conclusion
+
+This project demonstrates the use of Java programming concepts, including object-oriented programming, methods, arrays, loops, conditional statements, input validation, file handling, JSON processing and unit testing. It combines the different parts of the Programming 1A PoE into a console-based messaging application.
