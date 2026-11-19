@@ -1,0 +1,6 @@
+target/
+.idea/
+*.iml
+nbproject/private/
+.DS_Store
+data/stored-messages.json
